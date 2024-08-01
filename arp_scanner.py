@@ -10,7 +10,9 @@ from scapy.all import srp
 from scapy.all import ARP
 from scapy.all import Ether
 from argparse import ArgumentParser
+
 oui_vendor_list = json.loads(open("out.json","r").read())
+
 def check_ip_validation(ip_addr: str) -> bool:
     try:
         ipaddress.ip_network(ip_addr)
